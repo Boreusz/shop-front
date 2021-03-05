@@ -1,0 +1,11 @@
+.shop_container {
+    background-color: rgb(27, 43, 24);
+    background-size: cover;
+    min-height: 100vh;
+    color: rgb(241, 255, 241);
+}
+.shop_wrapper {
+    width: 80%;
+    margin: 0  auto;
+    padding: 25vh 0 10vh;
+}
