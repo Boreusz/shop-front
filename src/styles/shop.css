@@ -1,11 +1,72 @@
 .shop_container {
     background-color: rgb(27, 43, 24);
-    background-size: cover;
     min-height: 100vh;
     color: rgb(241, 255, 241);
 }
 .shop_wrapper {
     width: 80%;
-    margin: 0  auto;
-    padding: 25vh 0 10vh;
+    margin: 0 auto;
+    padding: 27vh 0 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.shop_side{
+    flex: 1 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 50px;
+}
+.side_list {
+ list-style: none;
+ color: rgb(241, 255, 241);
+}
+.side_list-element {
+    display: block;
+    margin-top: 0.5rem;
+}
+.side_list-element a {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: rgb(241, 255, 241);
+}
+.side_list-element a:hover {
+    border-bottom: 1px solid rgb(241, 255, 241);
+}
+.shop_main{
+    flex: 4 1;
+    display: flex;
+    justify-content: center;
+}
+.items_list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.items_list-element {
+    width: max(18.229vw,300px);
+    margin: 0 25px 50px 0;
+}
+.element-image {
+    width: max(18.229vw,300px);
+    height: max(18.229vw,300px);
+}
+.element-link {
+    color: rgb(241, 255, 241);
+    text-decoration: none;
+}
+.element-name {
+    font-weight: 600;
+    padding: 20px 0 0;
+    font-size: 1.3rem;
+}
+.element-price {
+    font-weight: 500;
+    padding: 13.333px 0 0;
 }
