@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styles/home.css";
 const Home = () => {
   useEffect(() => {
     document.title = "Oriole - Home";
   });
   return (
-    <div class="home">
+    <div className="home">
       <main>
         <section className="home__container">
           <h1>Make yourself special gift with our seasonal offer! </h1>
