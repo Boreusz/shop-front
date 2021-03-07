@@ -1,0 +1,12 @@
+.cart_container {
+    background-color: rgb(27, 43, 24);
+    min-height: 100vh;
+    color: rgb(241, 255, 241);
+}
+.cart_wrapper {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    padding: 50vh 0 ;
+    text-align: center;
+}
