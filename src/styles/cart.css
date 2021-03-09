@@ -1,5 +1,5 @@
 .cart_container {
-    background-color: rgb(27, 43, 24);
+    background-color: #121212;
     min-height: 100vh;
     color: rgb(241, 255, 241);
 }
@@ -9,4 +9,7 @@
     margin: 0 auto;
     padding: 50vh 0 ;
     text-align: center;
+}
+h1 {
+    font-size: 5.9vw;
 }
