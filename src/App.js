@@ -18,10 +18,10 @@ const App = () => {
       <div >
       <Navbar number={cartItems.length} />
         <Switch>
-          <Route exact path="/" component={Home} />
           <Route exact path="/shop" render={() => <Shop setSelectedItem={selectItem} />} />
           <Route path="/cart" render={(props) => <Cart {...props} />} />
           <Route path="/shop/:id" render={() => <Item item={selectedItem} />} />
+          <Route path="/" component={Home} />
         </Switch>
       </div>
     </Router>

@@ -69,7 +69,7 @@ const Shop = (props) => {
                 );
               })
             ) : (
-              <div className="empty">There is no Plants in this category. <br/> Check again in a few days or contact us! </div>
+              <div className="empty">There is no Plants in this category. <br/> Check again in a few days!</div>
             )}
           </ul>
         </main>
