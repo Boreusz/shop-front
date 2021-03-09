@@ -22,13 +22,19 @@ const Item = (props) => {
                 <div className="item-desc">{props.item.descripiton}</div>
                 <div className="item-stock">
                   Stock:{" "}
-                  {props.item.stock !== 0 ? (
+                  {props.item.stock > 7 ? (
                     <span className="in-stock">{props.item.stock}</span>
+                  ) : props.item.stock > 0 ? (
+                    <span className="low-stock">{props.item.stock}</span>
                   ) : (
                     outOfStock
                   )}
                 </div>
                 <div className="item-price">{props.item.price}</div>
+                  <form>
+                    <input type="number" className="qty-input" />
+                    <button type="button" className="buy-bttn">Add To Cart</button>
+                  </form>
               </div>
             </div>
           </div>
