@@ -20,6 +20,10 @@
     align-items: flex-start;
     margin-right: 50px;
 }
+.shop_side-title span{
+    font-size: 1.35rem;
+    font-weight: normal;
+}
 .side_list {
  list-style: none;
  color: rgb(241, 255, 241);

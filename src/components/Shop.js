@@ -5,6 +5,7 @@ import "../styles/shop.css";
 
 const Shop = (props) => {
   const [dataToPrint, setData] = useState(data);
+  const [currentFilter, setCurrentFilter] = useState('All')
   const filterData = (category) => {
     if (category === "all") {
       setData(data);
@@ -12,6 +13,7 @@ const Shop = (props) => {
       let newData = data.filter(item => item.category === category)
       setData(newData)
     }
+    setCurrentFilter(category[0].toUpperCase() + category.slice(1))
   };
   useEffect(() => {
     document.title = "Oriole - Shop";
@@ -20,7 +22,7 @@ const Shop = (props) => {
     <div className="shop_container">
       <div className="shop_wrapper">
         <aside className="shop_side">
-          <h2>Categories</h2>
+          <h2 className="shop_side-title">Products/<span>{currentFilter}</span></h2>
           <ul className="side_list">
             <li className="side_list-element">
               <button className="navi-bttn" type="button" onClick={() => filterData("all")}>
