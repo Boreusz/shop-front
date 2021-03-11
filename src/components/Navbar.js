@@ -16,7 +16,7 @@ const NavBar = (props) => {
             <Link to="/shop">Shop</Link>
           </li>
           <li>
-            <Link to="/cart"><span>{props.number ? props.number : null}<BsBagFill /></span></Link>
+            <Link to="/cart"><span>{props.number > 0 ? props.number : null}<BsBagFill /></span></Link>
           </li>
         </ul>
       </nav>
