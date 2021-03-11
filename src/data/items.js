@@ -14,7 +14,7 @@ export default [
     category: "small",
     image: image1,
     stock: 20,
-    price: "23.99$",
+    price: 23.99,
   },
   {
     id: "002",
@@ -27,7 +27,7 @@ export default [
     category: "small",
     image: image2,
     stock: 8,
-    price: "29.99$",
+    price: 29.99,
   },
   {
     id: "003",
@@ -39,7 +39,7 @@ export default [
     category: "small",
     image: image3,
     stock: 0,
-    price: "39.99$",
+    price: 39.99,
   },
   {
     id: "004",
@@ -53,6 +53,6 @@ export default [
     category: "medium",
     image: image4,
     stock: 4,
-    price: "239.99$",
+    price: 239.99,
   },
 ];

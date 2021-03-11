@@ -4,12 +4,28 @@
     color: rgb(241, 255, 241);
 }
 .cart_wrapper {
-    width: 80%;
+    width: 75%;
     height: 80%;
     margin: 0 auto;
     padding: 50vh 0 ;
     text-align: center;
 }
-h1 {
-    font-size: 5.9vw;
+.cart-list {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.cart-list-item{
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-content: space-around;
+}
+.cart-list-info {
+    flex: 1 1;
+    margin-top: 2%;
+
+}
+.cart-summary{
+    width: 30%;
 }
