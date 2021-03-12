@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/cart.css";
+import CartItem from "./CartItem";
 
 const Cart = (props) => {
 
@@ -9,14 +10,7 @@ const Cart = (props) => {
         <div className="cart-list">
           {props.items.map(item => {
             return(
-              <div className="cart-list-item">
-                <button className="cart-list-info" type="button" onClick={() => props.deleteItem()}>D</button>
-                <div className="cart-list-item-image">
-                  <img src={item.image} alt={item.name}/>
-                </div>
-                <input type="number" onChange></input>
-                <span className="cart-list-info">{item.price * item.stock}$</span>
-              </div>
+             <CartItem item={item}/>
             )
           })}
         </div>
