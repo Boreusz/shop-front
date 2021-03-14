@@ -21,6 +21,7 @@ const App = () => {
       if(ItemAppeared){
         ItemAppeared.stock += qty
         setCartItemsNumber(cartItemsNumber + parseInt(qty))
+        updatePrice()
       }else{
       itemInCart.stock = qty
       setCartItemsNumber(cartItemsNumber + parseInt(qty))
@@ -37,18 +38,20 @@ const App = () => {
       setCartItemsNumber(cartItemsNumber - qty);
       data.find(item => item.id === id).stock += qty;
       deletedItem.stock -= qty;
-
+      updatePrice()
     }else {
       setCartItemsNumber(cartItemsNumber - deletedItem.stock);
       data.find(item => item.id === id).stock += deletedItem.stock;
       setCartItems(cartItems.filter(item => item.id != id))
-
     }
   }
+  const updatePrice = () =>{
+    let total = 0;
+    cartItems.forEach((element) => total += element.stock*element.price);
+    setTotalPrice(total.toFixed(2))
+  }
   useEffect(() => {
-      let total = 0;
-      cartItems.forEach((element) => total += element.stock*element.price);
-      setTotalPrice(total.toFixed(2))
+      updatePrice()
     }, [cartItems])
   return (
     <Router>
