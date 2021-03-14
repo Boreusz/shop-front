@@ -20,7 +20,7 @@
   align-items: flex-start;
   color: rgb(241, 255, 241);
 }
-.home a {
+.home-bttn {
   background: rgb(241, 255, 241);
   padding: 16px 40px;
   font-size: 1.1rem;
@@ -28,7 +28,7 @@
   letter-spacing: 1px;
   color: black;
 }
-.home a:hover {
+.hone-bttn:hover {
   transform: translate3d(1px, 1px, 0);
 }
 .home h1 {

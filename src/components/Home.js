@@ -15,7 +15,7 @@ const Home = () => {
             house plants! <br />
             Check what we prepared this month and make your home unique!
           </p>
-          <Link to="/shop">SHOP NOW</Link>
+          <Link className="home-bttn" to="/shop">SHOP NOW</Link>
         </section>
       </main>
     </div>
