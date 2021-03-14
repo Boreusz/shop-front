@@ -5,7 +5,6 @@ import "../styles/item.css";
 const outOfStock = <span className="out-of-stock"> Sorry, already gone!</span>;
 const Item = (props) => {
   const [qty, setQty] = useState(1);
-  console.table(props)
   return (
     <div className="item_container">
       <div className="item_wrapper">
