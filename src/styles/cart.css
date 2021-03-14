@@ -9,6 +9,9 @@
   margin: 0 auto;
   padding: 30vh 0 10vh ;
 }
+.cart_wrapper h2 {
+  font-weight: 400;
+}
 .cart-list {
   display: flex;
   flex-direction: column;
@@ -31,4 +34,28 @@
   justify-content: space-evenly;
   align-items: center;
   padding: 20px 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .cart-summary {
+    left: 52%;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cart-summary {
+    left: 52%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cart-summary {
+    width: 60%;
+    left: 43%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cart-summary {
+    width: 100%;
+    left: 0%;
+  }
 }

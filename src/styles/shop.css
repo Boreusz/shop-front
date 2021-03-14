@@ -19,6 +19,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin-right: 50px;
+    margin-bottom: 2rem;
 }
 .shop_side-title span{
     font-size: 1.35rem;
@@ -80,6 +81,34 @@
 .empty{
     text-align: center;
     margin-top: 5%;
-    font-size: 44px;
+    font-size: 2rem;
     font-weight: 600;
+}
+@media screen and (max-width: 1024px) {
+    .items_list-element {
+        width: max(18.229vw,250px);
+        margin: 0 25px 50px 0;
+    }
+    .element-image {
+        width: max(18.229vw,250px);
+        height: max(18.229vw, 250px);
+    }
+    .empty {
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    .shop_wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        margin-right: 0;
+    }
+    .shop_side {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        min-height: 0;
+    }
 }

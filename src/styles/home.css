@@ -36,7 +36,31 @@
   font-size: 2rem;
 }
 .home p {
-  font-size: 20px;
+  font-size: 1.3rem;
   line-height: 130%;
   margin: 18px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .home h1 {
+    font-size: 1.5rem;
+  }
+  .home p {
+    font-size: 1.1rem;
+  }
+  .home-bttn  {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home h1 {
+    font-size: 1.1rem;
+  }
+  .home p {
+    font-size: 0.95rem;
+  }
+  .home-bttn  {
+    font-size: 0.95rem;
+    padding: 12px 25px;
+  }
 }
