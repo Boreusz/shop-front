@@ -11,28 +11,52 @@ import "./styles/app.css";
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
   const [cartItemsNumber, setCartItemsNumber] = useState(0)
+  const [totalPrice, setTotalPrice] = useState(0)
   const [selectedItem, setSelectedItem] = useState('000')
   const addItemToCart = (id, qty) => {
-    let itemInCart = Object.assign({}, data.find(item => item.id === id))
+    let itemInCart = Object.assign({}, data.find (item => item.id === id))
     if(qty <= itemInCart.stock){
       data.find(item => item.id === id).stock -= qty;
+      let ItemAppeared = cartItems.find(item => item.id === itemInCart.id)
+      if(ItemAppeared){
+        ItemAppeared.stock += qty
+        setCartItemsNumber(cartItemsNumber + parseInt(qty))
+      }else{
       itemInCart.stock = qty
       setCartItemsNumber(cartItemsNumber + parseInt(qty))
       setCartItems(cartItems.concat(itemInCart))
+      }
+
     }else{
       alert("We don't have enough of it in stock")
     }
   }
-  const deleteItemFromCart = (id) => {
+  const deleteItemFromCart = (id, qty = 0) => {
+    let deletedItem = cartItems.find(item => item.id === id);
+    if(qty > 0 && qty != deletedItem.stock){
+      setCartItemsNumber(cartItemsNumber - qty);
+      data.find(item => item.id === id).stock += qty;
+      deletedItem.stock -= qty;
 
+    }else {
+      setCartItemsNumber(cartItemsNumber - deletedItem.stock);
+      data.find(item => item.id === id).stock += deletedItem.stock;
+      setCartItems(cartItems.filter(item => item.id != id))
+
+    }
   }
+  useEffect(() => {
+      let total = 0;
+      cartItems.forEach((element) => total += element.stock*element.price);
+      setTotalPrice(total.toFixed(2))
+    }, [cartItems])
   return (
     <Router>
-      <div >
+      <div>
       <Navbar number={cartItemsNumber} />
         <Switch>
           <Route exact path="/shop" render={() => <Shop setSelectedItem={setSelectedItem} />} />
-          <Route path="/cart" render={() => <Cart items={cartItems} deleteItem={deleteItemFromCart}/>} />
+          <Route path="/cart" render={() => <Cart items={cartItems} deleteItem={deleteItemFromCart} addItemToCart={addItemToCart} totalPrice={totalPrice} />} />
           <Route path="/shop/:id" render={() => <Item item={selectedItem} addItemToCart={addItemToCart} input />} />
           <Route path="/" component={Home} />
         </Switch>
