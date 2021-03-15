@@ -36,15 +36,15 @@
   padding: 20px 30px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .cart-summary {
     left: 52%;
-    width: 50%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .cart-summary {
-    left: 52%;
+    left: 44%;
+    width: 60%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -57,5 +57,11 @@
   .cart-summary {
     width: 100%;
     left: 0%;
+  }
+  .cart-summary h2{
+    font-size: 1.3rem;
+  }
+  .cart-summary h3 {
+    font-size: 1.1rem;
   }
 }

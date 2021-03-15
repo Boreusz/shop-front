@@ -55,3 +55,62 @@
   .cart-list-item-name {
     width: 100px;
   }
+  @media screen and (max-width: 768px) {
+    .cart_wrapper {
+      width: 85%;
+    }
+    .cart-list-item img {
+      height: 110px;
+      width: 110px;
+  }
+  .cart-list-item-quantity button {
+    width: 25px;
+    height: 25px;
+    font-size: 1.1rem;
+  }
+  .cart-list-item-quantity input {
+    width: 25px;
+    height: 25px;
+  }
+  .cart-list-item-delete {
+    width: 25px;
+    height: 25px;
+    font-size: 1.2rem;
+  }
+  .cart-list-item-quantity {
+    width: 90px;
+  }
+  }
+  @media screen and (max-width: 480px) {
+    .cart_wrapper {
+      width: 90%;
+    }
+    .cart-list-item {
+      padding: 20px 0px;
+    }
+    .cart-list-item img {
+      height: 80px;
+      width: 80px;
+  }
+  .cart-list-item-name,
+  .cart-list-info {
+    font-size: 0.9rem;
+  }
+  .cart-list-item-quantity {
+    width: 90px;
+  }
+  .cart-list-item-quantity button {
+    width: 25px;
+    height: 25px;
+    font-size: 1.1rem;
+  }
+  .cart-list-item-quantity input {
+    width: 25px;
+    height: 25px;
+  }
+  .cart-list-item-delete {
+    width: 25px;
+    height: 25px;
+    font-size: 1.2rem;
+  }
+}
