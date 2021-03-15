@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { BsChevronLeft } from "react-icons/bs";
 import "../styles/item.css";
 
 const outOfStock = <span className="out-of-stock"> Sorry, already gone!</span>;
@@ -32,10 +31,22 @@ const Item = (props) => {
                   )}
                 </div>
                 <div className="item-price">{props.item.price}$</div>
-                  <form>
-                    <input type="number" value={qty} id="qty" className="qty-input" onChange={(e) => setQty(e.target.value)} />
-                    <button type="button" className="buy-bttn" onClick={() => props.addItemToCart(props.item.id, qty)}>Add To Cart</button>
-                  </form>
+                <form>
+                  <input
+                    type="number"
+                    value={qty}
+                    id="qty"
+                    className="qty-input"
+                    onChange={(e) => setQty(e.target.value)}
+                  />
+                  <button
+                    type="button"
+                    className="buy-bttn"
+                    onClick={() => props.addItemToCart(props.item.id, qty)}
+                  >
+                    Add To Cart
+                  </button>
+                </form>
               </div>
             </div>
           </div>

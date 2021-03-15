@@ -1,14 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom"
-import { BsBagFill } from 'react-icons/bs'
-import '../styles/navbar.css'
+import { Link } from "react-router-dom";
+import { BsBagFill } from "react-icons/bs";
+import "../styles/navbar.css";
 
 const NavBar = (props) => {
   return (
     <header className="navbar">
-      <nav >
+      <nav>
         <Link to="/">ORIOLE</Link>
-        <ul>
+        <ul className="menu">
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -16,12 +16,16 @@ const NavBar = (props) => {
             <Link to="/shop">Shop</Link>
           </li>
           <li>
-            <Link to="/cart"><span>{props.number > 0 ? props.number : null}<BsBagFill /></span></Link>
+            <Link to="/cart">
+              <span>
+                {props.number > 0 ? props.number : null}
+                <BsBagFill />
+              </span>
+            </Link>
           </li>
         </ul>
       </nav>
-      <div className="separator"></div>
     </header>
   );
 };
-export default NavBar
+export default NavBar;
