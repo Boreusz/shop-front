@@ -20,29 +20,44 @@
   letter-spacing: 1px;
   color: rgb(241, 255, 241);
 }
-.navbar nav ul {
+.menu {
   width: 30%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
 }
-.navbar nav ul li {
+.menu li {
   height: 23px;
   min-width: 33px;
 }
-.navbar nav ul a {
+.menu a {
   font-size: 1.2rem;
   text-decoration: none;
   letter-spacing: 1px;
   color: rgb(241, 255, 241);
 }
-.navbar nav ul li:hover {
+.menu li:hover {
   display: block;
   border-bottom: 1px solid rgb(241, 255, 241);
 }
-.navbar nav ul a span {
+.menu a span {
   display: flex;
   justify-content: center;
   text-align: center;
+}
+@media screen and (max-width: 480px) {
+  .navbar {
+    width: 90%;
+    top: 5%;
+    left: 5%;
+  }
+  .navbar nav{
+    flex-direction: column;
+  }
+  .menu {
+    margin-top: 5%;
+    width: 100%;
+    justify-content: space-around;
+  }
 }
